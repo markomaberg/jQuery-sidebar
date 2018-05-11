@@ -100,9 +100,9 @@
         self.on("sidebar:close", function(ev, data) {
             var properties = {};
             if (settings.side === "left" || settings.side === "right") {
-                properties[settings.side] = -self.outerWidth();
+                properties[settings.side] = -($(window).width()); // -self.outerWidth(); // Edit
             } else {
-                properties[settings.side] = -self.outerHeight();
+                properties[settings.side] = -($(window).height()); // -self.outerHeight(); // Edit
             }
             settings.isClosed = null;
             self.stop().animate(properties, $.extend({}, settings, data).speed, function() {

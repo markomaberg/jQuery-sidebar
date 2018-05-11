@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="sv-se">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Jquery sidebar - example</title>
+    <link rel="stylesheet" href="../src/sidebars.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9" crossorigin="anonymous">
+
+    <style type="text/css">
+        <!--
+        .link-white a,
+        .text-white button {
+            color: white !important;
+        }
+        -->
+    </style>
+</head>
+
+<body>
+    <header class="area-header bg-dark">
+        <div class="container">
+            <div class="row align-items-center justify-content-between text-white link-white">
+                <div class="col-auto">
+                    <button data-sidebar-toggle="" data-sidebar-target="#navSidebar" type="button" class="navbar-toggle btn btn-link sidebar-toggle"><span class="fa fa-bars"></span> <span class="sr-only">Meny</span></button>
+                </div>
+                <div class="col-auto">
+                    <a href="#">
+                        Logo
+                    </a>
+                </div>
+                <div class="col-auto">
+                    <button data-sidebar-toggle="" data-sidebar-side="right" data-sidebar-target="#navRightSidebar" data-sidebar-breakpoint="768" type="button" class="navbar-toggle btn btn-link sidebar-toggle"><span class="fa fa-bars"></span> <span class="sr-only">Meny</span></button>
+                </div>
+            </div>
+        </div>
+        <nav class="c-mobilenav bg-light" id="navSidebar">
+            <div class="c-mobilenav__sidebar">
+                <div class="c-mobilenav__sidebar-header">
+                    <button type="button" class="btn btn-link" data-sidebar-close><span class="fa fa-times"></span> Stäng meny</button>
+                </div>
+                <div class="c-mobilenav__sidebar-scroll">
+                    <p>Content</p>
+                </div>
+            </div>
+        </nav>
+        <nav class="c-mobilenav bg-light" id="navRightSidebar">
+            <div class="c-mobilenav__sidebar">
+                <div class="c-mobilenav__sidebar-header">
+                    <button type="button" class="btn btn-link" data-sidebar-close><span class="fa fa-times"></span> Stäng meny</button>
+                </div>
+                <div class="c-mobilenav__sidebar-scroll">
+                    <p>Content</p>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <a id="content"></a>
+
+    <div class="container">
+        <div class="row">
+            <div class="col pt-3 pb-3">
+                <p>Content</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="main-footer bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col pt-3 pb-3">
+                    Footer
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+
+    <script src="../src/jquery.sidebar.js"></script>
+    <script src="../src/sidebars.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            // ----------
+            // Init sidebars
+            // ----------
+            //$('*[data-sidebar-toggle]').sidebars({});
+        }); 
+    </script>
+</body>
+</html>
