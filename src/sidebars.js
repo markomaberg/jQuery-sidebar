@@ -12,30 +12,32 @@
         };
 
     function Sidebars(el) {
-        if ($('button[data-sidebar-toggle').length > 0) {
-            this.$toggler = $(el);
-            this.$target = $(el).attr('data-sidebar-target');
+        this.$toggler = $(el);
+        this.$target = $(el).attr('data-sidebar-target');
 
-            this.$sidebar = $(this.$target);
-            this.$sidebar.addClass('sidebar-item');
+        this.$sidebar = $(this.$target);
+        this.$sidebar.addClass('sidebar-item');
 
-            this.$closeButton = this.$sidebar.find('[data-sidebar-close]');
+        this.$closeButton = this.$sidebar.find('[data-sidebar-close]');
 
-            this.$side = $(el).attr('data-sidebar-side') || "left";
-            if (this.$side == "left") {
-                this.$sidebar.addClass('sidebar-item--right');
-            };
+        this.$side = this.$toggler.attr('data-sidebar-side') || "left";
+        if (this.$side == "left") {
+            this.$sidebar.addClass('sidebar-item--right');
+        };
 
-            this.$breakpoint = $(el).attr('data-sidebar-breakpoint');
+        this.$breakpoint = this.$toggler.attr('data-sidebar-breakpoint');
 
-            this.$body = $('body');
-            this.$windowPos = 0;
+        this.$body = $('body');
+        this.$windowPos = 0;
 
-            this.$wrapper = $(el).attr('data-sidebar-holder') || this.$body;
-            this.$wrapper.addClass('sidebar-wrapper');
+        if (this.$toggler.attr('data-sidebar-holder')) {
+            this.$wrapper = $(this.$toggler.attr('data-sidebar-holder'))
+        } else {
+            this.$wrapper = this.$body;
+        } 
+        this.$wrapper.addClass('sidebar-wrapper');
 
-            this.init();
-        }
+        this.init();
     };
 
     Sidebars.prototype = {

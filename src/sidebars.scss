@@ -25,7 +25,8 @@ body {
     height: 100%;
 }
 
-.sidebar-wrapper {
+body.sidebar-open .sidebar-wrapper,
+body.sidebar-open.sidebar-wrapper {
     position: relative;
     overflow: hidden;
     max-width: 100%;
