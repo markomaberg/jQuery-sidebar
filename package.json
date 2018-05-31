@@ -1,6 +1,6 @@
 {
   "name": "jquery-sidebar-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A stupid simple sidebar jQuery plugin. Based on https://github.com/jillix/jQuery-sidebar",
   "main": "src/jquery.sidebar.js",
   "scripts": {
